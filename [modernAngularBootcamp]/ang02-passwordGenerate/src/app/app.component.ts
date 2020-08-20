@@ -36,7 +36,7 @@ export class AppComponent {
   onButtonClick(): void {
     const numbers = '1234567890';
     const letters = 'abcdefghijklmnopqrstuvwyz';
-    const symbols = '!@#$%^&*().,;\|/?';
+    const symbols = '!@#$%^&*()-=_+.,;\|/?';
 
     let validChars = '';
     if (this.includeLetters) {
