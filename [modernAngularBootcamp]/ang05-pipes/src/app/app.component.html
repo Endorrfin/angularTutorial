@@ -32,7 +32,8 @@
     <div class="col">
       <label for=""><b>Payment Date</b></label>
       <div>
-        {{ date | date  }}
+<!--        {{ date | date }}-->
+        {{ date | date:  'MMMM d,' }}
       </div>
     </div>
   </div>
