@@ -6,9 +6,9 @@
         {{ randomText }}
       </p>
       <div class="field">
-        <input type="text" />
+        <input class="input" type="text" (input)="onInput($event.target.value)"/>
       </div>
-      <div class="box has-text-centered">
+      <div *ngIf="randomText === enteredText" class="box has-text-centered">
         <h2 class="title">Success!</h2>
       </div>
     </div>
