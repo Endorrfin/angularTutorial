@@ -11,6 +11,14 @@ export class AppComponent {
   amount: number;
   height: number;
 
+  car = {
+    make: 'Toyota',
+    model: 'Camry',
+    year: 2018,
+    engineVolume: 2.0,
+    color: 'whine'
+  };
+
   onHeightChange(value: string) {
     this.height = parseFloat(value);
   }
