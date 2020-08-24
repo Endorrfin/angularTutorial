@@ -6,22 +6,42 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  currentPage = 0;
   images = [
     {
       title: 'At the Beach',
       url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
     },
     {
-      title: 'At the Beach',
+      title: 'At the See',
       url: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
     },
     {
-      title: 'At the Beach',
+      title: 'At the Sunset',
       url: 'https://images.unsplash.com/photo-1504321946642-8f661bf96ff0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
     },
     {
-      title: 'At the Beach',
+      title: 'At the Sky',
       url: 'https://images.unsplash.com/photo-1476673160081-cf065607f449?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
     },
   ];
+
+
+  getClass() {
+    const classes = [];
+
+    if (something()) {
+      classes.push('active');
+    }
+
+    if (comethingElse()) {
+      classes.push('something');
+    }
+
+    if (yetAnotherCheck()) {
+      classes.push('check');
+    }
+
+    return classes;
+  }
 }
