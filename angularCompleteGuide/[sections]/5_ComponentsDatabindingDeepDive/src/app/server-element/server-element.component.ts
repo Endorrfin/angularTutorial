@@ -34,7 +34,7 @@ export class ServerElementComponent implements
   @Input('srvElement') element: {type: string, name: string, content: string};
   @Input() name: string;
   @ViewChild('heading') header: ElementRef;
-  @ContentChild
+  @ContentChild('contentParagraph') paragraph: ElementRef;
 
   constructor() {
     console.log('constructor called!');
@@ -47,7 +47,8 @@ export class ServerElementComponent implements
 
   ngOnInit() {
     console.log('ngOnInit called!');
-    console.log('Text Content: ' + this.header.nativeElement.textContent);
+    // console.log('Text Content: ' + this.header.nativeElement.textContent);
+    console.log('Test Content of paragraph: ' + this.paragraph.nativeElement.textContent);
   }
 
   ngDoCheck() {
@@ -56,6 +57,7 @@ export class ServerElementComponent implements
 
   ngAfterContentInit() {
     console.log('ngAfterContentInit called!');
+    console.log('Test Content of paragraph: ' + this.paragraph.nativeElement.textContent);
   }
 
   ngAfterContentChecked() {
