@@ -15,6 +15,11 @@ export class HeaderComponent implements OnInit {
   public myClass = 'red';
   public changeColor = 'blue';
   public changeStyle = 'yellow';
+  public myWidth = 200;
+  public mysrc = '';
+  public myhref = '';
+  public myStyle = '';
+  public myColor = 'gray';
 
   constructor() {
     setTimeout(() => {

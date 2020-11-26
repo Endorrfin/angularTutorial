@@ -11,7 +11,7 @@
 
 <h2><b>Выводим свойства объекта</b></h2>
 <p>{{ user.name }}</p>
-<p>{{ 'Hello, ' + user.name + '!' }}</p>
+<!--<p>{{ 'Hello, ' + user.name + '!' }}</p>-->
 <p>Hello {{ user.name }}!</p>
 <hr>
 
@@ -37,6 +37,15 @@
 <hr>
 
 
+<p [style.width.px]="myWidth">
+  Hello Width
+</p>
 <img [src]="mysrc" [alt]="">
 <a [href]="myhref"></a>
-<p'style.color'="'pink'" >Вложенные стили</p>
+<p [style]=""></p>
+<hr>
+
+
+<h2><b>Обработка событий</b></h2>
+<p (click)="myColor = 'blue' " [style.color]="myColor">This is text for example</p>
+<hr>
