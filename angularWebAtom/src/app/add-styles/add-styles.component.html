@@ -1,0 +1,10 @@
+<h2>{{title}}</h2>
+<!--
+  condition - условие
+  ?
+  состояние которое примет выражение, если будет true
+  :
+  состояние которое примет выражение, если будет false
+-->
+<p [style.backgroundColor]="isActiveBgColor ? 'pink' : 'cyan'">This is inline style manipulation with background color</p>
+<p [style.color]="isActiveColor ? 'blue' : 'red'">This is inline style manipulation with text color</p>

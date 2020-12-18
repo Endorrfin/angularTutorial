@@ -1,0 +1,24 @@
+<h2>{{title}}</h2>
+<small>1. Навешиваем клавишу клавиатуры на input</small> <br>
+<label style="margin-right: 10px">KeyUp</label>
+<input type="text" (keyup.enter)="onEnterPress()">
+
+<br>
+<small>2. Получение данных из input в консоль с помощью $event</small> <br>
+<label style="margin-right: 10px">$Event</label>
+<input type="text" (keyup.enter)="onEnterPressValue($event)">
+
+<br>
+<small>3. Получение данных из input в консоль c помощью внутренней ссылки</small> <br>
+<label style="margin-right: 10px">Data value</label>
+<input type="text" #data (keyup.enter)="onEnterPressValueData(data.value)">
+
+<br>
+<small>3. Получение данных в input сразу после загрузки страницы</small> <br>
+<label style="margin-right: 10px">Data display</label>
+<input type="text" [(ngModel)]="myData" (keyup.enter)="onEnterPressValueDataDisplay(data.value)">
+
+
+
+
+
