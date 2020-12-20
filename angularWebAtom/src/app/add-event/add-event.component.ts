@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-event.component.css']
 })
 export class AddEventComponent implements OnInit {
-  title = 'It is about Event';
+  title = 'About Event';
 
   constructor() { }
 
@@ -17,9 +17,12 @@ export class AddEventComponent implements OnInit {
     console.log('Button save');
   }
 
-  // tslint:disable-next-line:typedef
-  onClick($event) {
-    $event.stopPropagation();
+  // onClick($event): any {
+  //   $event.stopPropagation();
+  //   console.log('Button clicked', $event);
+  // }
+
+  onClick($event: { stopPropagation: () => void; }): any {
     console.log('Button clicked', $event);
   }
 
