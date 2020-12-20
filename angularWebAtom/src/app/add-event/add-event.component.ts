@@ -17,6 +17,7 @@ export class AddEventComponent implements OnInit {
     console.log('Button save');
   }
 
+  // tslint:disable-next-line:typedef
   onClick($event) {
     $event.stopPropagation();
     console.log('Button clicked', $event);

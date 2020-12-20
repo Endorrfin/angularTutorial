@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { SummaryPipe } from './my-custom-pipes/summary.pipe';
+// import { SummaryPipe } from './my-custom-pipes/summary.pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +18,7 @@ import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
-    SummaryPipe,
+    // SummaryPipe,
     AppComponent,
     TypeScriptComponent,
     MenuComponent,

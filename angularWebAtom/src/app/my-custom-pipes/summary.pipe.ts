@@ -1,17 +1,27 @@
-import { Pipe, PipeTransform } from '@angular/core';
+// import { Pipe, PipeTransform } from '@angular/core';
+//
+// @Pipe({
+//   name: 'summary'
+// })
 
-@Pipe({
-  name: 'summary'
-})
-
-  export class SummaryPipe implements PipeTransform {
+  // export class SummaryPipe implements PipeTransform {
     // transform(value: any, ...args): any { // default
-    transform(value: string, args?: number) {
-      if (!value) {
-        return null;
+    // transform(value: string, args?: number) {
+    //   if (!value) {
+    //     return null;
+    //     const lim = (args) ? args : 30;
+    //     return value.substring(0, lim) + '...';
+    //   }
+    // }
 
-        const lim = (args) ? args : 30;
-        return value.substring(0, lim) + '...';
-      }
-    }
-  }
+  // transform(value: any, ...args): any { // default
+    // transform (value: string, args?: number) {
+    //   if (!value) {
+    //     return null;
+    //
+    //     const lim = (args) ? args : 30;
+    //     return value.substring(0, lim) + '...';
+    //   }
+    // }
+
+  // }
