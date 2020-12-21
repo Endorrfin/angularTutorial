@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-output',
@@ -6,8 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./output.component.css']
 })
 export class OutputComponent implements OnInit {
+  title = 'About @Output()';
+@Output() customName = new EventEmitter();
 
-  constructor() { }
+onOutput() {
+  console.log('Work Output component');
+  this.customName.emit();
+}
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

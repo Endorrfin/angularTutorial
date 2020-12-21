@@ -10,4 +10,8 @@ export class AppComponent {
   classValue = true;
   displayClass = true;
   nonDisplayClass = false;
+
+  myMethod() {
+    console.log('Custom method triggered - hello Output in App');
+  }
 }

@@ -24,8 +24,10 @@
 <app-pipes></app-pipes>
 <hr>
 
-<!--<app-input [isSupport]="displayClasses"></app-input>-->
 <app-input [isDisplay]="displayClass" [isNonDisplay]="nonDisplayClass"></app-input>
+<hr>
+
+<app-output (customName)="myMethod()"></app-output>
 <hr>
 
 
