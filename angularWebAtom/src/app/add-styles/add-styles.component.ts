@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-styles.component.css']
 })
 export class AddStylesComponent implements OnInit {
-  title = 'It is about Styles';
+  title = 'About Styles';
   isActiveBgColor = false;
   isActiveColor = true;
 

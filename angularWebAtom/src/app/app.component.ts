@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angularWebAtom';
   classValue = true;
+  displayClass = true;
+  nonDisplayClass = false;
 }

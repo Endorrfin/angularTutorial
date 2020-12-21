@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./add-classes.component.css']
 })
 export class AddClassesComponent implements OnInit {
-  title = 'This is Classes';
+  title = 'About Classes';
   isActive = true;
   color = false;
   state = true;

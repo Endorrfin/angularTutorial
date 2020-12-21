@@ -15,6 +15,8 @@ import { AddStylesComponent } from './add-styles/add-styles.component';
 import { AddEventComponent } from './add-event/add-event.component';
 import { AddInputComponent } from './add-input/add-input.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { InputComponent } from './input/input.component';
+import { OutputComponent } from './output/output.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { PipesComponent } from './pipes/pipes.component';
     AddStylesComponent,
     AddEventComponent,
     AddInputComponent,
-    PipesComponent
+    PipesComponent,
+    InputComponent,
+    OutputComponent
   ],
   imports: [
     BrowserModule,
