@@ -27,7 +27,7 @@
 <app-input [isDisplay]="displayClass" [isNonDisplay]="nonDisplayClass"></app-input>
 <hr>
 
-<app-output (customName)="myMethod()"></app-output>
+<app-output (customName)="myMethod()" (customNameValue)="myMethodPassValue($event)" ></app-output>
 <hr>
 
 
