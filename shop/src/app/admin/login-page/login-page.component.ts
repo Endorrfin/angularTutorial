@@ -9,12 +9,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-page.component.scss']
 })
 export class LoginPageComponent implements OnInit {
-  form: FormGroup | undefined;
+  form: FormGroup;
   submitted: false;
 
   constructor(
     public auth: AuthService,
-    private router: Router
+    private router: Router,
   ) {
   }
 
@@ -25,9 +25,14 @@ export class LoginPageComponent implements OnInit {
     });
   }
 
-  submit() {
-    if (this.form.invalid) {
-      return;
+  // submit() {
+  //   if (this.form.invalid) {
+  //     return;
+  //   }
+
+    submit() {
+      if (this.form.invalid) {
+        return;
     }
 
     this.submitted = true;
@@ -38,7 +43,7 @@ export class LoginPageComponent implements OnInit {
     };
 
     this.auth.login(user).subscribe(res => {
-      this.form.reset;
+      this.form.reset();
       this.router.navigate(['/admin', 'dashboard']);
       this.submitted = false;
     }, () => {
@@ -46,4 +51,5 @@ export class LoginPageComponent implements OnInit {
       }
     );
   }
+
 }
