@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-page.component.scss']
 })
 export class LoginPageComponent implements OnInit {
-  form: FormGroup;
-  submitted: false;
+  form = FormGroup;
+  submitted = false;
 
   constructor(
     public auth: AuthService,
@@ -25,29 +25,24 @@ export class LoginPageComponent implements OnInit {
     });
   }
 
-  // submit() {
-  //   if (this.form.invalid) {
-  //     return;
-  //   }
-
     submit() {
       if (this.form.invalid) {
         return;
     }
 
-    this.submitted = true;
+      this.submitted = true;
 
-    const user = {
-      email: this.form.value.email,
-      password: this.form.value.password,
-      returnSecureToken: true
+      const user = {
+        email: this.form.value.email,
+        password: this.form.value.password,
+        returnSecureToken: true
     };
 
-    this.auth.login(user).subscribe(res => {
+      this.auth.login(user).subscribe(res => {
         console.log(res);
-      this.form.reset();
-      this.router.navigate(['/admin', 'dashboard']);
-      this.submitted = false;
+        this.form.reset();
+        this.router.navigate(['/admin', 'dashboard']);
+        this.submitted = false;
     }, () => {
       this.submitted = false;
       }

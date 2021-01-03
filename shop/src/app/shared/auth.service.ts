@@ -29,11 +29,11 @@ export class AuthService {
 
   get token() {
      const expDate = new Date(localStorage.getItem('fb-token-exp'));
-    if (new Date > expDate) {
+     if (new Date > expDate) {
       this.logout();
       return null;
     }
-    return localStorage.getItem('fb-token');
+     return localStorage.getItem('fb-token');
   }
 
   logout() {
