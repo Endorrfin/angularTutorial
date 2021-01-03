@@ -13,9 +13,20 @@ export class ProductService {
     private http: HttpClient
   ) { }
 
+  // create(product) {
+  //   return this.http.post(`${environment.fbDbUrl}/products.json`, product)
+  //     .pipe(map((res : FbResponse) => {
+  //       return {
+  //         ...product,
+  //         id: res.name,
+  //         date: new Date(product.date)
+  //       };
+  //     }));
+  // }
+
   create(product) {
-    return this.http.post(`${environment.fbDBUrl}/products.json`, product)
-      .pipe(map((res : FbResponse) => {
+    return this.http.post(`${environment.fbDbUrl}/products.json`, product)
+      .pipe(map( (res : FbResponse) => {
         return {
           ...product,
           id: res.name,
@@ -23,4 +34,5 @@ export class ProductService {
         };
       }));
   }
+
 }
