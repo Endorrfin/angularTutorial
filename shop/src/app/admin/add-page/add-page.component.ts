@@ -50,4 +50,5 @@ export class AddPageComponent implements OnInit {
       this.router.navigate(['/']);
     });
   }
+
 }
