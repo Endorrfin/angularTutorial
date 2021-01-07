@@ -8,18 +8,15 @@ import { Observable } from 'rxjs';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
-  products$: Observable<any>;
-
-  ngOnInit(): void {
-  }
-
+  // products$: Observable<any>;
+  products$;
 
   constructor(
-    private productServ: ProductService
+    public productServ: ProductService
   ) { }
 
-  ngOnInit(): void {
-    this.products$ = this.productServ.getAll()
+  ngOnInit() {
+    this.products$ = this.productServ.getAll();
   }
 
 }

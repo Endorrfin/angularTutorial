@@ -2,13 +2,13 @@
   <h2>Online Shop</h2>
   <ul>
     <li routerLinkActive="">
-      <a href="#">Phone</a>
+      <a (click)="setType('Phone')">Phone</a>
     </li><li routerLinkActive="">
-      <a href="#">Tablet</a>
+      <a (click)="setType('Tablet')">Tablet</a>
     </li><li routerLinkActive="">
-      <a href="#">Laptop</a>
+      <a (click)="setType('Laptop')">Laptop</a>
     </li><li routerLinkActive="">
-      <a [routerLink]="['/cart']">Cart</a>
+      <a (click)="setType('Cart')" [routerLink]="['/cart']">Cart</a>
     </li>
   </ul>
 </nav>

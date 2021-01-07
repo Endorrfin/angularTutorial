@@ -11,6 +11,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { QuillModule } from 'ngx-quill';
 import { AuthInterceptor } from './shared/auth.interseptor';
 import { ProductComponent } from './product/product.component';
+import { SortingPipe } from './shared/pipes/sorting.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ProductComponent } from './product/product.component';
     MainPageComponent,
     ProductPageComponent,
     CartPageComponent,
-    ProductComponent
+    ProductComponent,
+    SortingPipe
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,7 @@ import { ProductComponent } from './product/product.component';
       useClass: AuthInterceptor
     }
   ],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,6 +11,7 @@ export class DashboardComponent implements OnInit {
   products = [];
   pSub: Subscription;
   rSub: Subscription;
+  productName;
 
   constructor(
     private productServ: ProductService
