@@ -9,6 +9,7 @@ import { FbResponse, Product } from './models/interfaces';
 })
 export class ProductService {
   type = 'Phone';
+  cartProducts: Product [] = [];
 
   constructor(
     private http: HttpClient
@@ -58,6 +59,10 @@ export class ProductService {
 
   setType (type) {
     this.type = type;
+  }
+
+  addProduct (product) {
+    this.cartProducts.push(product);
   }
 
 }

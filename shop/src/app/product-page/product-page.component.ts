@@ -23,4 +23,8 @@ export class ProductPageComponent implements OnInit {
       }));
   }
 
+  addProduct(product: string) {
+    this.productServ.addProduct(product);
+  }
+
 }
